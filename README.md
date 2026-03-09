@@ -1,20 +1,34 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# TennisTravel Planner 🎾
 
-# Run and deploy your AI Studio app
+A premium, AI-powered travel planning application designed specifically for tennis enthusiasts. Plan your pilgrimage to the world's most iconic tournaments with ease.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/4c0e42a1-0386-4322-b8a3-dfeaaa34439a
+- **AI Scouting**: Automatically identifies official dates, ticket and hotel information using Gemini 3.1 Flash.
+- **Smart Date Discovery**: Leave the dates blank, and the AI will find the official schedule for the tournament of this calender year.
+- **Direct Booking**: One-click access to book your flights, trains and hotels.
+- **Dynamic Immersive UI**: The interface color shifts based on the tournament's surface, featuring tennis court on the background.
+- **Comprehensive Reports**: Get median costs for travel and accommodation (2-5 stars), weather forecasts, and local sightseeing guides.
 
-## Run Locally
+## Tech Stack
 
-**Prerequisites:**  Node.js
+- **Frontend**: React 18, TypeScript, Tailwind CSS.
+- **AI**: Google Gemini API (@google/genai).
+- **Animations**: Framer Motion.
+- **Icons**: Lucide React.
 
+## Getting Started
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. Enter a tournament name (e.g., "Wimbledon", "Roland Garros").
+2. Enter your departure city.
+3. Click **Plan Trip**. If you don't enter dates, the AI will suggest the official ones for you.
+4. Review your custom travel report and use the booking links to secure your trip.
+
+## Environment Variables
+
+The following environment variables are required:
+
+- `GEMINI_API_KEY`: Your Google Gemini API key.
+
+---
+*Crafted for the love of the game.*

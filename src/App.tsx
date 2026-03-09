@@ -4,6 +4,7 @@ import {
   Calendar, 
   Plane, 
   Train, 
+  Bus,
   Car, 
   Ticket, 
   Hotel, 
@@ -238,7 +239,7 @@ export default function App() {
                 <div className="flex bg-black/5 rounded-2xl p-1">
                   {[
                     { id: 'plane', icon: Plane, label: 'Plane' },
-                    { id: 'train', icon: Train, label: 'Train' },
+                    { id: 'ground', icon: Train, label: 'Train/Bus' },
                     { id: 'drive', icon: Car, label: 'Drive' }
                   ].map((item) => (
                     <button
@@ -380,7 +381,9 @@ export default function App() {
                 <div className="space-y-6">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
-                      {transport === 'plane' ? <Plane className="w-5 h-5" /> : transport === 'train' ? <Train className="w-5 h-5" /> : <Car className="w-5 h-5" />}
+                      {transport === 'plane' ? <Plane className="w-5 h-5" /> : 
+                       transport === 'ground' ? <Train className="w-5 h-5" /> : 
+                       <Car className="w-5 h-5" />}
                     </div>
                     <h3 className="text-xl font-bold">Travel Costs</h3>
                   </div>
