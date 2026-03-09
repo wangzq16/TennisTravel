@@ -91,7 +91,7 @@ export async function generateTennisTripReport(
        - For Train (US): Use Amtrak: https://www.amtrak.com/booking?from=${departure}&to=[CityName]&departureDate=[MM/DD/YYYY] (CRITICAL: You MUST convert ${startDate} from YYYY-MM-DD to MM/DD/YYYY for this URL).
        - For Bus (US): Use Greyhound: https://www.greyhound.com/en-us/results?departureCity=${departure}&arrivalCity=[CityName]&date=${startDate}
        - For Bus (US): Use Peter Pan: https://peterpanbus.com/
-       - For Train/Bus (Europe/UK): Use Trainline: https://www.thetrainline.com/en/search/results?from=${departure}&to=[CityName]&outwardDate=${startDate}&returnDate=${endDate}
+       - For Train/Bus (Europe/UK): Use Trainline: https://www.thetrainline.com/train-times/${departure}-to-[CityName]?outwardDate=${startDate}&outwardDateType=departAfter
        - For Drive (Car Rental): Use Expedia: https://www.expedia.com/Car-Search?destination=[CityName]&startDate=${startDate}&endDate=${endDate}
        - FALLBACK: Always include a Google Search link: https://www.google.com/search?q=book+${transportation === 'ground' ? 'Train or Bus' : transportation}+from+${departure}+to+[CityName]+for+${startDate}
        - IMPORTANT: In all URLs, replace [CityName] with ONLY the name of the city where the tournament is held (e.g., 'London', 'Paris', 'New York'). 
